@@ -1,0 +1,275 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% include "style.html" %}
+{% endblock %}
+{% block body %}
+<!-- Loader -->
+<div id="preloader">
+    <div id="status">
+        <div class="spinner">Loading...</div>
+    </div>
+</div>
+
+<!-- Start Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top custom-nav sticky">
+    <div class="container">
+
+        <a class="navbar-brand pt-0 logo" href="#">
+            <img src="/static/images/logo.png" alt="" class="img-fluid logo-light">
+            <img src="/static/images/logo-dark.png" alt="" class="img-fluid logo-dark">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="mdi mdi-menu"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#abstract">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#dataset">Dataset Experts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#fast-adapt">Fast Adapt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#download-subset">Download Subset</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Navbar -->
+
+<!-- START HOME -->
+<section class="section header-bg-img h-100vh clippath_none" id="home">
+    <div class="bg-overlay"></div>
+    <div class="header-table">
+        <div class="header-table-center">
+            <div class="container position-relative z-index">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="text-center header-content mx-auto">
+                            <h1 class="header-name text-white text-capitalize mb-0">AI Data Server<span
+                                    class="font-weight-bold" data-elements=""></span></h1>
+                            <p class="text-white mx-auto header-desc mt-4">What Data is Useful for my Data: <br>
+                                Transfer Learning with a Mixture of Self-Supervised Experts</p>
+                            <div class="mt-4 pt-2">
+                                <a class="btn btn-outline-custom btn-round" href="#abstract">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END HOME -->
+
+<!-- START ABOUT -->
+<section class="section" id="abstract">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-center">
+                    <h2><span class="font-weight-bold">Abstract</span></h2>
+                </div>
+                <br>
+                <p class="text-muted mt-2">Transfer learning has proven to be a successful way to train high performing
+                    deep learning models
+                    in various applications for which little labeled data is available. In transfer learning, one
+                    pre-trains the model on a large dataset such as Imagenet or MS-COCO, and fine-tunes its weights
+                    on the target domain. In our work, we claim that in the new era of ever increasing number of
+                    massive datasets, selecting the relevant pre-training data itself is a critical issue. We
+                    introduce a new problem in which available datasets are stored in one centralized location,
+                    i.e., a dataserver. We assume that a client, a target application with its own small labeled
+                    dataset, is only interested in fetching a subset of the server’s data that is most relevant to
+                    its own target domain. We propose a novel method that aims to optimally select subsets of data
+                    from the dataserver given a particular target client. We perform data selection by employing a
+                    mixture of experts model in a series of dataserver- client transactions with a small
+                    computational cost. We show the effectiveness of our work in several transfer learning
+                    scenarios, demonstrating state-of-the-art per- formance on several target datasets and tasks
+                    such as image classification, object detection and instance segmentation. We will make our
+                    framework available as a web-service, serving data to users trying to improve performance in
+                    their A.I. application.</p>
+                <br>
+                <div class="mt-3">
+                    <img src="/static/images/server-client.png" alt="" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END ABOUT -->
+
+<!--START DATASET -->
+<section class="section text-center bg-light" id="dataset">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="text-center">
+                    <h2>1. Dataset <span class="font-weight-bold">Experts</span></h2>
+                    <p class="text-muted mx-auto section-subtitle mt-3">Download pretrained self-supervised expert
+                        models.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 ">
+            <ul class="col list-unstyled list-inline mb-0 text-uppercase work_menu" id="menu-filter">
+                <li class="list-inline-item"><a class="active" data-filter="*">All</a></li>
+                <li class="list-inline-item"><a class="" data-filter=".classification">Classification</a></li>
+                <li class="list-inline-item"><a class="" data-filter=".detection">Detection</a></li>
+                <li class="list-inline-item"><a class="" data-filter=".segmentation">Segmentation</a></li>
+                <li class="list-inline-item"><a class="" data-filter=".misc">Misc</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-4 work-filter">
+            <div class="col-lg-4 work_item webdesign wordpress">
+                <a href="/static/images/works/1.jpg" class="img-zoom">
+                    <div class="work_box">
+                        <div class="work_img">
+                            <img src="/static/images/works/1.jpg" class="img-fluid mx-auto d-block rounded"
+                                alt="work-img">
+                        </div>
+                        <div class="work_detail">
+                            <div class="mb-2"><button type="button" class="btn btn-outline-light">View Dataset</button>
+                            </div>
+                            <div class="mb-2"><button class="btn btn-outline-light" type="button">Download
+                                    Experts</button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 work_item webdesign wordpress">
+                <a href="/static/images/works/1.jpg" class="img-zoom">
+                    <div class="work_box">
+                        <div class="work_img">
+                            <img src="/static/images/works/2.jpg" class="img-fluid mx-auto d-block rounded"
+                                alt="work-img">
+                        </div>
+                        <div class="work_detail">
+                            <div class="mb-2"><button type="button" class="btn btn-outline-light">View Dataset</button>
+                            </div>
+                            <div class="mb-2"><button class="btn btn-outline-light" type="button">Download
+                                    Experts</button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 work_item webdesign wordpress">
+                <a href="/static/images/works/1.jpg" class="img-zoom">
+                    <div class="work_box">
+                        <div class="work_img">
+                            <img src="/static/images/works/3.jpg" class="img-fluid mx-auto d-block rounded"
+                                alt="work-img">
+                        </div>
+                        <div class="work_detail">
+                            <div class="mb-2"><button type="button" class="btn btn-outline-light">View Dataset</button>
+                            </div>
+                            <div class="mb-2"><button class="btn btn-outline-light" type="button">Download
+                                    Experts</button></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- <div class="col-lg-4 work_item devlopment webdesign">
+                <a href="/static/images/works/6.jpg" class="img-zoom">
+                    <div class="work_box">
+                        <div class="work_img">
+                            <img src="/static/images/works/6.jpg" class="img-fluid mx-auto d-block rounded"
+                                alt="work-img">
+                        </div>
+                        <div class="work_detail">
+                            <p class="mb-2">Category</p>
+                            <h4 class="mb-0">Project Title</h4>
+                        </div>
+                    </div>
+                </a>
+            </div> -->
+        </div>
+    </div>
+</section>
+<!--END DATASET -->
+
+<!-- START FAST ADAPTATION -->
+<section class="section" id="fast-adapt">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-center">
+                    <h2>2. Adapt Your Dataset</h2>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-custom">Download Fast Adaptation Script</a>
+                    <p class="text-muted mt-2">TODO: Instructions on running fast adaptation script and expert model
+                        download</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END FAST ADAPTATION -->
+
+
+<!-- START CONTACT -->
+<section class="section bg-light" id="download-subset">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="text-center">
+                    <h2><span class="font-weight-bold">3. Download</span> Data Subset</h2>
+                    <p class="text-muted mx-auto section-subtitle mt-3">Upload the text file generated by our fast
+                        adaptation script to download the subset most relevant for you</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <div class="form-kerri contact_form">
+                    <div id="message"></div>
+                    <form method="post" action="php/contact.php" name="contact-form" id="working_form">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group mt-2">
+                                    <label for="exampleFormControlFile1">Upload z.pickle</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group mt-2">
+                                    <label for="exampleFormControlSelect1">Source Dataset</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>ImageNet</option>
+                                        <option>COCO</option>
+                                        <option>OpenImages</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 text-right">
+                                <input type="submit" id="submit" name="send"
+                                    class="submitBnt btn btn-custom text-uppercase" value="Download">
+                                <div id="simple-msg"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END CONTACT -->
+{% endblock %}
