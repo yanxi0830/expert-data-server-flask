@@ -12,6 +12,8 @@ $(function() {
             success: function(data) {
                 document.getElementById("download-btn").disabled = false;
                 console.log('Success!');
+                updateGraph(data);
+                console.log(data.nodes);
             },
         });
     });

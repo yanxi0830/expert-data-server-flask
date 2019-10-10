@@ -1,12 +1,31 @@
-from flask import Flask, render_template, send_file, request
+from flask import Flask, render_template, send_file, request, jsonify
 import os
 import pathlib
 import io
 import zipfile
 import pickle
+from utils import transfer_pickle2json
 
 app = Flask(__name__)
-
+temp_nodes = {
+    "nodes": [
+        {"id": "CENTER", "group": 1},
+        {"id": "COCO[0]", "group": 2},
+        {"id": "COCO[1]", "group": 3},
+        {"id": "COCO[2]", "group": 4},
+        {"id": "COCO[3]", "group": 5},
+        {"id": "COCO[4]", "group": 6},
+        {"id": "COCO[5]", "group": 7}
+    ],
+    "links": [
+        {"source": "CENTER", "target": "COCO[0]", "value": 46.2891},
+        {"source": "CENTER", "target": "COCO[1]", "value": 57.7973},
+        {"source": "CENTER", "target": "COCO[2]", "value": 55.1241},
+        {"source": "CENTER", "target": "COCO[3]", "value": 42.7405},
+        {"source": "CENTER", "target": "COCO[4]", "value": 57},
+        {"source": "CENTER", "target": "COCO[5]", "value": 40}
+    ]
+}
 
 # ----------------------------------------------------------------------------#
 # Controllers.
@@ -32,11 +51,13 @@ def fast_adapt():
 @app.route('/upload', methods=['POST'])
 def upload_file():
     if request.method == 'POST':
-        print("GOT POST")
+        save_path = os.path.join('tmp', 'z.pickle')
         file_val = request.files['file']
-        file_val.save(os.path.join('tmp', 'z.pickle'))
-
-    return "UPLOADED FILE TODO"
+        file_val.save(save_path)
+        z = pickle.load(open(save_path, 'rb'))
+        json_graph = transfer_pickle2json(z)
+        return jsonify(json_graph)
+    return "/upload ENDPOINT"
 
 
 @app.route('/download-zip', methods=['GET'])
