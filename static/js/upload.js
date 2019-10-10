@@ -10,6 +10,7 @@ $(function() {
             cache: false,
             processData: false,
             success: function(data) {
+                document.getElementById("download-btn").disabled = false;
                 console.log('Success!');
             },
         });

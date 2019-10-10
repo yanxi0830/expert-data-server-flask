@@ -126,18 +126,17 @@
                 <li class="list-inline-item"><a class="active" data-filter="*">All</a></li>
                 <li class="list-inline-item"><a class="" data-filter=".classification">Classification</a></li>
                 <li class="list-inline-item"><a class="" data-filter=".detection">Detection</a></li>
-                <li class="list-inline-item"><a class="" data-filter=".segmentation">Segmentation</a></li>
                 <li class="list-inline-item"><a class="" data-filter=".misc">Misc</a></li>
             </ul>
         </div>
     </div>
     <div class="container">
         <div class="row mt-4 work-filter">
-            <div class="col-lg-4 work_item webdesign wordpress">
+            <div class="col-lg-4 work_item detection">
                 <div class="img-fluid">
                     <div class="work_box">
                         <div class="work_img">
-                            <img src="/static/images/works/1.jpg" class="img-fluid mx-auto d-block rounded"
+                            <img src="/static/images/works/1-coco.jpg" class="img-fluid mx-auto d-block rounded"
                                 alt="work-img">
                         </div>
                         <div class="work_detail">
@@ -153,7 +152,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 work_item webdesign wordpress">
+            <div class="col-lg-4 work_item classification">
                 <div class="img-fluid">
                     <div class="work_box">
                         <div class="work_img">
@@ -170,7 +169,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 work_item webdesign wordpress">
+            <div class="col-lg-4 work_item detection">
                 <div class="img-fluid">
                     <div class="work_box">
                         <div class="work_img">
@@ -216,7 +215,9 @@
                     <h2>2. Adapt Your Dataset</h2>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="/fast_adapt.sh" target="_blank" class="btn btn-custom" download="fast_adapt.sh">Download Fast Adaptation
+{#                    <a href="/fast_adapt.sh" target="_blank" class="btn btn-custom" download="fast_adapt.sh">Download Fast Adaptation#}
+{#                        Script</a>#}
+                    <a href="https://github.com/yanxi0830/fast-adapt" target="_blank" class="btn btn-custom">Download Fast Adaptation
                         Script</a>
                     <p class="text-muted mt-2">TODO: Instructions on running fast adaptation script and expert model
                         download</p>
@@ -269,7 +270,8 @@
                             <div class="col-lg-12 text-right">
                                 <button id="upload-btn" class="submitBnt btn btn-custom text-uppercase" type="button">Upload</button>
                                 <!-- <input type="submit" class="submitBnt btn btn-custom text-uppercase" value="Upload"> -->
-                                <button id="download-btn" class="submitBnt btn btn-custom text-uppercase" disabled=True type="button">Download</button>
+                                <button id="download-btn" class="submitBnt btn btn-custom text-uppercase" disabled=True
+                                        type="button" onclick="window.open('download-zip')">Download ZIP</button>
                                 <div id="simple-msg"></div>
                             </div>
                         </div>
