@@ -2,7 +2,8 @@ var svg = d3.select("svg");
 var width = +svg.attr("width");
 var height = +svg.attr("height");
 
-var color = d3.scaleOrdinal(d3.schemeCategory20);
+// var color = d3.scaleOrdinal(d3.schemeCategory20);
+var color = d3.scaleSequential().domain([-0.2, 1.2]).interpolator(d3.interpolateViridis);
 
 var link, node, circles, lables;
 
@@ -14,7 +15,7 @@ function updateGraph(nodesSpec) {
     svg.selectAll("*").remove();
 
     var simulation = d3.forceSimulation()
-        .force("link", d3.forceLink().id(function (d) { return d.id; }).distance(d => d.value * 3))
+        .force("link", d3.forceLink().id(function (d) { return d.id; }).distance(d => (450 - d.value*5)))
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(width / 2, height / 2));
 
@@ -35,7 +36,7 @@ function updateGraph(nodesSpec) {
             .selectAll("line")
             .data(graph.links)
             .enter().append("line")
-            .attr("stroke-width", function (d) { return Math.sqrt(d.value * 0.1); });
+            .attr("stroke-width", function (d) { return d.value * 0.05; });
 
         node = svg.append("g")
             .attr("class", "nodes")
@@ -44,8 +45,8 @@ function updateGraph(nodesSpec) {
             .enter().append("g")
 
         circles = node.append("circle")
-            .attr("r", 20)
-            .attr("fill", function (d) { return color(d.group); })
+            .attr("r", 15)
+            .attr("fill", function (d) { return color(d.value); })
             .call(d3.drag()
                 .on("start", dragstarted)
                 .on("drag", dragged)
