@@ -4,7 +4,7 @@ import pathlib
 import io
 import zipfile
 import pickle
-from utils import transfer_pickle2json
+from utils import transfer_pickle2json, sample_from_partition
 
 app = Flask(__name__)
 temp_nodes = {
@@ -62,19 +62,25 @@ def upload_file():
 
 @app.route('/download-zip', methods=['GET'])
 def request_zip():
-    print("PLACEHOLDER FOR DOWNLOADING ZIP")
-    partition_dict_path = '/h/yanxi/git/expert-data-server/partition/res152--h-yanxi-Disk-datasets-coco-val2017--partition.pickle'
-    with open(partition_dict_path, 'rb') as f:
-        partition_dict = pickle.load(f)
+    save_path = os.path.join('tmp', 'z.pickle')
+    z = pickle.load(open(save_path, 'rb'))
+    sampled_filenames = sample_from_partition(z)
+    print(sampled_filenames)
+    return {"filenames": sampled_filenames}
 
-    cluster_filepaths = partition_dict[0]
+    # print("PLACEHOLDER FOR DOWNLOADING ZIP")
+    # partition_dict_path = '/h/yanxi/git/expert-data-server/partition/res152--h-yanxi-Disk-datasets-coco-val2017--partition.pickle'
+    # with open(partition_dict_path, 'rb') as f:
+    #     partition_dict = pickle.load(f)
 
-    data = io.BytesIO()
-    with zipfile.ZipFile(data, mode='w') as z:
-        for f_name in cluster_filepaths:
-            z.write(f_name, os.path.basename(f_name))
-    data.seek(0)
-    return send_file(data, mimetype='application/zip', as_attachment=True, attachment_filename='data.zip')
+    # cluster_filepaths = partition_dict[0]
+
+    # data = io.BytesIO()
+    # with zipfile.ZipFile(data, mode='w') as z:
+    #     for f_name in cluster_filepaths:
+    #         z.write(f_name, os.path.basename(f_name))
+    # data.seek(0)
+    # return send_file(data, mimetype='application/zip', as_attachment=True, attachment_filename='data.zip')
 
 
 # ----------------------------------------------------------------------------#
