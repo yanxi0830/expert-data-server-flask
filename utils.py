@@ -2,7 +2,7 @@ import pickle
 import operator
 import re
 import numpy as np
-
+import os
 
 def transfer_pickle2json(pickle_dict):
     # Given {'coco4': 53.6566, 'coco3': 46.9727, 'coco0': 47.3202, 'coco2': 53.2849, 'coco5': 62.9665, 'coco6': 67.9512}
@@ -35,8 +35,8 @@ def sample_from_partition(pickle_dict):
     # p.match("openimages32")
 
     dataset2partition_file = {
-        'coco': '',
-        'openimages': ''
+        'coco': os.path.join('partitions', 'coco-partition.pickle'),
+        'openimages': os.path.join('partitions', 'openimages-partition.pickle')
     }
     
     # for partition in pickle_dict:
