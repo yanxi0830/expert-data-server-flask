@@ -71,7 +71,6 @@ def sample_from_partition(pickle_dict, budget):
     filenames_probs = np.array(filenames_probs)
     # sampling filenames
     filenames_probs /= filenames_probs.sum()
-    # sample_size = 117266    # TODO: size according to client request
     sample_size = budget
     sampled_indices = np.random.choice(len(filenames_probs), sample_size, replace=False, p=filenames_probs)
     
