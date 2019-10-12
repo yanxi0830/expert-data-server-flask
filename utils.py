@@ -72,7 +72,7 @@ def sample_from_partition(pickle_dict):
     # sampling filenames
     filenames_probs /= filenames_probs.sum()
     sample_size = 117266    # TODO: size according to client request
-    sample_size = 58633
+    sample_size = 500
     sampled_indices = np.random.choice(len(filenames_probs), sample_size, replace=False, p=filenames_probs)
     
     sampled_filenames = [filenames[i] for i in sampled_indices]

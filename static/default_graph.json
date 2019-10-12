@@ -1,13 +1,511 @@
 {
     "nodes": [
-      {"id": "CLIENT DATASET", "group": 1, "value": 1.5},
-      {"id": "COCO[0]", "group": 2, "value": 0},
-      {"id": "COCO[1]", "group": 2, "value": 0},
-      {"id": "COCO[2]", "group": 2, "value": 0},
-      {"id": "COCO[3]", "group": 2, "value": 0},
-      {"id": "COCO[4]", "group": 2, "value": 0},
-      {"id": "COCO[5]", "group": 2, "value": 0}
+        {
+            "id": "Cityscapes",
+            "group": 0,
+            "value": 1.5
+        },
+        {
+            "id": "openimages28",
+            "group": 0,
+            "value": 1.0
+        },
+        {
+            "id": "openimages22",
+            "group": 1,
+            "value": 0.7317955887211322
+        },
+        {
+            "id": "openimages6",
+            "group": 2,
+            "value": 0.0
+        },
+        {
+            "id": "openimages10",
+            "group": 3,
+            "value": 0.34092873154734465
+        },
+        {
+            "id": "openimages31",
+            "group": 4,
+            "value": 0.5701140242980571
+        },
+        {
+            "id": "openimages46",
+            "group": 5,
+            "value": 0.4048077228177384
+        },
+        {
+            "id": "openimages41",
+            "group": 6,
+            "value": 0.7291694275267235
+        },
+        {
+            "id": "openimages36",
+            "group": 7,
+            "value": 0.39098444648099995
+        },
+        {
+            "id": "openimages17",
+            "group": 8,
+            "value": 0.5959463419459724
+        },
+        {
+            "id": "openimages1",
+            "group": 9,
+            "value": 0.6872908356866748
+        },
+        {
+            "id": "openimages25",
+            "group": 10,
+            "value": 0.2928645688485394
+        },
+        {
+            "id": "openimages5",
+            "group": 11,
+            "value": 0.7147694036355626
+        },
+        {
+            "id": "openimages21",
+            "group": 12,
+            "value": 0.480143272305105
+        },
+        {
+            "id": "openimages13",
+            "group": 13,
+            "value": 0.8383632315034818
+        },
+        {
+            "id": "openimages19",
+            "group": 14,
+            "value": 0.48803295486997045
+        },
+        {
+            "id": "openimages38",
+            "group": 15,
+            "value": 0.6638737650789621
+        },
+        {
+            "id": "openimages45",
+            "group": 16,
+            "value": 0.20214348508575622
+        },
+        {
+            "id": "openimages32",
+            "group": 17,
+            "value": 0.7074881990730976
+        },
+        {
+            "id": "openimages48",
+            "group": 18,
+            "value": 0.6055905316343234
+        },
+        {
+            "id": "openimages35",
+            "group": 19,
+            "value": 0.4831371333966698
+        },
+        {
+            "id": "openimages42",
+            "group": 20,
+            "value": 0.8053859635697128
+        },
+        {
+            "id": "openimages14",
+            "group": 21,
+            "value": 0.48070135489012855
+        },
+        {
+            "id": "openimages26",
+            "group": 22,
+            "value": 0.7563829529101486
+        },
+        {
+            "id": "openimages2",
+            "group": 23,
+            "value": 0.753708262795303
+        },
+        {
+            "id": "openimages8",
+            "group": 24,
+            "value": 0.7500667272656006
+        },
+        {
+            "id": "openimages16",
+            "group": 25,
+            "value": 0.3782642698357295
+        },
+        {
+            "id": "openimages0",
+            "group": 26,
+            "value": 0.5758516358912429
+        },
+        {
+            "id": "openimages24",
+            "group": 27,
+            "value": 0.676310234189371
+        },
+        {
+            "id": "openimages37",
+            "group": 28,
+            "value": 0.06437547945640146
+        },
+        {
+            "id": "openimages40",
+            "group": 29,
+            "value": 0.8247993982413866
+        },
+        {
+            "id": "openimages47",
+            "group": 30,
+            "value": 0.494524631226867
+        },
+        {
+            "id": "openimages30",
+            "group": 31,
+            "value": 0.7370292461405509
+        },
+        {
+            "id": "openimages23",
+            "group": 32,
+            "value": 0.5855387550092112
+        },
+        {
+            "id": "openimages29",
+            "group": 33,
+            "value": 0.5948880381810614
+        },
+        {
+            "id": "openimages7",
+            "group": 34,
+            "value": 0.6214856195743267
+        },
+        {
+            "id": "openimages11",
+            "group": 35,
+            "value": 0.2786119982156289
+        },
+        {
+            "id": "openimages15",
+            "group": 36,
+            "value": 0.6567941421860038
+        },
+        {
+            "id": "openimages27",
+            "group": 37,
+            "value": 0.6121550013718752
+        },
+        {
+            "id": "openimages9",
+            "group": 38,
+            "value": 0.5646862511968911
+        },
+        {
+            "id": "openimages3",
+            "group": 39,
+            "value": 0.27527470168712653
+        },
+        {
+            "id": "openimages43",
+            "group": 40,
+            "value": 0.951793983533764
+        },
+        {
+            "id": "openimages34",
+            "group": 41,
+            "value": 0.6460524522970045
+        },
+        {
+            "id": "openimages49",
+            "group": 42,
+            "value": 0.6947232265012702
+        },
+        {
+            "id": "openimages33",
+            "group": 43,
+            "value": 0.29815795417003416
+        },
+        {
+            "id": "openimages44",
+            "group": 44,
+            "value": 0.41613549274585965
+        },
+        {
+            "id": "openimages39",
+            "group": 45,
+            "value": 0.44173263177935024
+        },
+        {
+            "id": "openimages4",
+            "group": 46,
+            "value": 0.5571306715842639
+        },
+        {
+            "id": "openimages20",
+            "group": 47,
+            "value": 0.5801147149019248
+        },
+        {
+            "id": "openimages18",
+            "group": 48,
+            "value": 0.7748071442036871
+        },
+        {
+            "id": "openimages12",
+            "group": 49,
+            "value": 0.6900924475934321
+        }
     ],
     "links": [
+        {
+            "source": "Cityscapes",
+            "target": "openimages28",
+            "value": 77.4346
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages22",
+            "value": 63.0652
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages6",
+            "value": 23.8583
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages10",
+            "value": 42.124
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages31",
+            "value": 54.4029
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages46",
+            "value": 45.5464
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages41",
+            "value": 62.9245
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages36",
+            "value": 44.8058
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages17",
+            "value": 55.7869
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages1",
+            "value": 60.6808
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages25",
+            "value": 39.5489
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages5",
+            "value": 62.153
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages21",
+            "value": 49.5826
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages13",
+            "value": 68.7747
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages19",
+            "value": 50.0053
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages38",
+            "value": 59.4262
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages45",
+            "value": 34.6884
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages32",
+            "value": 61.7629
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages48",
+            "value": 56.3036
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages35",
+            "value": 49.743
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages42",
+            "value": 67.0079
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages14",
+            "value": 49.6125
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages26",
+            "value": 64.3825
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages2",
+            "value": 64.2392
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages8",
+            "value": 64.0441
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages16",
+            "value": 44.1243
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages0",
+            "value": 54.7103
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages24",
+            "value": 60.0925
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages37",
+            "value": 27.3073
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages40",
+            "value": 68.048
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages47",
+            "value": 50.3531
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages30",
+            "value": 63.3456
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages23",
+            "value": 55.2293
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages29",
+            "value": 55.7302
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages7",
+            "value": 57.1552
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages11",
+            "value": 38.7853
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages15",
+            "value": 59.0469
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages27",
+            "value": 56.6553
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages9",
+            "value": 54.1121
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages3",
+            "value": 38.6065
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages43",
+            "value": 74.8519
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages34",
+            "value": 58.4714
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages49",
+            "value": 61.079
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages33",
+            "value": 39.8325
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages44",
+            "value": 46.1533
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages39",
+            "value": 47.5247
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages4",
+            "value": 53.7073
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages20",
+            "value": 54.9387
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages18",
+            "value": 65.3696
+        },
+        {
+            "source": "Cityscapes",
+            "target": "openimages12",
+            "value": 60.8309
+        }
     ]
 }

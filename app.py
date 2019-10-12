@@ -57,6 +57,7 @@ def upload_file():
         file_val.save(save_path)
         z = pickle.load(open(save_path, 'rb'))
         json_graph = transfer_pickle2json(z)
+        json.dump(json_graph, open('default_graph.json', 'w'))
         return jsonify(json_graph)
     return "/upload ENDPOINT"
 
