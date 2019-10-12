@@ -25,7 +25,7 @@ def transfer_pickle2json(pickle_dict):
     
     return res
 
-def sample_from_partition(pickle_dict):
+def sample_from_partition(pickle_dict, budget):
     """
     Given pickle_dict={'coco4': 53.6566, 'coco3': 46.9727, 'coco0': 47.3202, 'coco2': 53.2849, 'coco5': 62.9665, 'coco6': 67.9512}
     Use it to sample from static pre-defined partition={0: [list of filepaths]}
@@ -71,8 +71,8 @@ def sample_from_partition(pickle_dict):
     filenames_probs = np.array(filenames_probs)
     # sampling filenames
     filenames_probs /= filenames_probs.sum()
-    sample_size = 117266    # TODO: size according to client request
-    sample_size = 1000
+    # sample_size = 117266    # TODO: size according to client request
+    sample_size = budget
     sampled_indices = np.random.choice(len(filenames_probs), sample_size, replace=False, p=filenames_probs)
     
     sampled_filenames = [filenames[i] for i in sampled_indices]

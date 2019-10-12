@@ -36,13 +36,14 @@ def upload_file():
     return "UPLOAD-ENDPOINT"
 
 
-@app.route('/download-zip', methods=['GET'])
+@app.route('/download-data', methods=['GET'])
 def request_zip():
+    budget = int(request.args.get('budget'))
     save_path = os.path.join('tmp', 'z.pickle')
     z = pickle.load(open(save_path, 'rb'))
-    sampled_filenames = sample_from_partition(z)
+    sampled_filenames = sample_from_partition(z, budget)
 
-    json_file = json.dumps({"filenames": sampled_filenames})    # TODO: more detailed JSON? data
+    json_file = json.dumps({"imageids": sampled_filenames})    # TODO: more detailed JSON? 
 
     return Response(json_file,
                     mimetype='application/json',

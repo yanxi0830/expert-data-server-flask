@@ -17,4 +17,10 @@ $(function() {
             },
         });
     });
+
+    $('#download-btn').click(function () {
+        var budget = $('#budget').val();
+        window.open('download-data?budget='+budget);
+    });
+
 });
