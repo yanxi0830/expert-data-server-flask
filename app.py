@@ -8,25 +8,6 @@ import json
 from utils import transfer_pickle2json, sample_from_partition
 
 app = Flask(__name__)
-temp_nodes = {
-    "nodes": [
-        {"id": "CENTER", "group": 1},
-        {"id": "COCO[0]", "group": 2},
-        {"id": "COCO[1]", "group": 3},
-        {"id": "COCO[2]", "group": 4},
-        {"id": "COCO[3]", "group": 5},
-        {"id": "COCO[4]", "group": 6},
-        {"id": "COCO[5]", "group": 7}
-    ],
-    "links": [
-        {"source": "CENTER", "target": "COCO[0]", "value": 46.2891},
-        {"source": "CENTER", "target": "COCO[1]", "value": 57.7973},
-        {"source": "CENTER", "target": "COCO[2]", "value": 55.1241},
-        {"source": "CENTER", "target": "COCO[3]", "value": 42.7405},
-        {"source": "CENTER", "target": "COCO[4]", "value": 57},
-        {"source": "CENTER", "target": "COCO[5]", "value": 40}
-    ]
-}
 
 # ----------------------------------------------------------------------------#
 # Controllers.
@@ -57,9 +38,8 @@ def upload_file():
         file_val.save(save_path)
         z = pickle.load(open(save_path, 'rb'))
         json_graph = transfer_pickle2json(z)
-        json.dump(json_graph, open('default_graph.json', 'w'))
         return jsonify(json_graph)
-    return "/upload ENDPOINT"
+    return "UPLOAD-ENDPOINT"
 
 
 @app.route('/download-zip', methods=['GET'])
@@ -68,7 +48,7 @@ def request_zip():
     z = pickle.load(open(save_path, 'rb'))
     sampled_filenames = sample_from_partition(z)
 
-    json_file = json.dumps({"filenames": sampled_filenames})    # TODO: more detailed JSON data
+    json_file = json.dumps({"filenames": sampled_filenames})    # TODO: more detailed JSON? data
 
     return Response(json_file,
                     mimetype='application/json',
