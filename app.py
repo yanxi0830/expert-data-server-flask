@@ -1,9 +1,10 @@
-from flask import Flask, render_template, send_file, request, jsonify
+from flask import Flask, render_template, send_file, request, jsonify, Response
 import os
 import pathlib
 import io
 import zipfile
 import pickle
+import json
 from utils import transfer_pickle2json, sample_from_partition
 
 app = Flask(__name__)
@@ -65,8 +66,12 @@ def request_zip():
     save_path = os.path.join('tmp', 'z.pickle')
     z = pickle.load(open(save_path, 'rb'))
     sampled_filenames = sample_from_partition(z)
-    print(sampled_filenames)
-    return {"filenames": sampled_filenames}
+
+    json_file = json.dumps({"filenames": sampled_filenames})    # TODO: more detailed JSON data
+
+    return Response(json_file,
+                    mimetype='application/json',
+                    headers={'Content-Disposition':'attachment;filename=data.json'})
 
     # print("PLACEHOLDER FOR DOWNLOADING ZIP")
     # partition_dict_path = '/h/yanxi/git/expert-data-server/partition/res152--h-yanxi-Disk-datasets-coco-val2017--partition.pickle'

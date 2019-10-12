@@ -50,7 +50,7 @@ def sample_from_partition(pickle_dict):
     
     expert_perfs = np.array(expert_perfs)
     expert_perfs = (expert_perfs - np.min(expert_perfs)) / (np.max(expert_perfs) - np.min(expert_perfs))
-    expert_perfs = expert_perfs * 10
+    expert_perfs = expert_perfs * 100
 
     expert_probs = softmax(expert_perfs)
     print(expert_probs)
@@ -72,11 +72,11 @@ def sample_from_partition(pickle_dict):
     # sampling filenames
     filenames_probs /= filenames_probs.sum()
     sample_size = 117266    # TODO: size according to client request
-    sample_size = 10
+    sample_size = 58633
     sampled_indices = np.random.choice(len(filenames_probs), sample_size, replace=False, p=filenames_probs)
     
     sampled_filenames = [filenames[i] for i in sampled_indices]
-    print(sampled_filenames)
+    # print(sampled_filenames)
 
     return sampled_filenames   
 
