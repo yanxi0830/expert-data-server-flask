@@ -18,16 +18,10 @@ def home():
     return render_template('index.html')
 
 
-@app.route("/download_coco_experts.sh")
+@app.route("/NeuralDataServer_ClientFastAdapt.ipynb")
 def download_coco_experts():
-    script_path = 'scripts/download_coco_experts.sh'
-    return send_file(script_path, attachment_filename='download_coco_experts.sh')
-
-
-@app.route("/fast_adapt.sh")
-def fast_adapt():
-    script_path = 'scripts/fast_adapt.sh'
-    return send_file(script_path, attachment_filename='fast_adapt.sh')
+    script_path = 'scripts/NeuralDataServer_ClientFastAdapt.ipynb'
+    return send_file(script_path, attachment_filename='NeuralDataServer_ClientFastAdapt.ipynb')
 
 
 @app.route('/upload', methods=['POST'])

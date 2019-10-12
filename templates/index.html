@@ -136,7 +136,7 @@
                 <div class="img-fluid">
                     <div class="work_box">
                         <div class="work_img">
-                            <img src="/static/images/works/1-coco.jpg" class="img-fluid mx-auto d-block rounded"
+                            <img src="/static/images/works/2-openimages.jpg" class="img-fluid mx-auto d-block rounded"
                                 alt="work-img">
                         </div>
                         <div class="work_detail">
@@ -144,8 +144,27 @@
                                     href="https://storage.googleapis.com/openimages/web/index.html" target="_blank">View
                                     Dataset</a>
                             </div>
-                            <div class="mb-2"><a class="btn btn-outline-light" href="/download_coco_experts.sh"
-                                    target="_blank" download="download_coco_experts.sh">Download
+                            <div class="mb-2"><a class="btn btn-outline-light" href="https://www.dropbox.com/s/97kr7k3b2wyjjnn/openimages.zip?dl=0"
+                                    target="_blank" download="">Download
+                                    Experts</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 work_item detection">
+                <div class="img-fluid">
+                    <div class="work_box">
+                        <div class="work_img">
+                            <img src="/static/images/works/1-coco.jpg" class="img-fluid mx-auto d-block rounded"
+                                alt="work-img">
+                        </div>
+                        <div class="work_detail">
+                            <div class="mb-2"><a class="btn btn-outline-light" href="http://cocodataset.org/"
+                                    target="_blank">View Dataset</a>
+                            </div>
+                            <div class="mb-2"><a class="btn btn-outline-light" href="https://www.dropbox.com/s/7odxi0rmutcnkwv/coco.zip?dl=0"
+                                    target="_blank" download="">Download
                                     Experts</a>
                             </div>
                         </div>
@@ -156,24 +175,7 @@
                 <div class="img-fluid">
                     <div class="work_box">
                         <div class="work_img">
-                            <img src="/static/images/works/2.jpg" class="img-fluid mx-auto d-block rounded"
-                                alt="work-img">
-                        </div>
-                        <div class="work_detail">
-                            <div class="mb-2"><a class="btn btn-outline-light" href="http://cocodataset.org/"
-                                    target="_blank">View Dataset</a>
-                            </div>
-                            <div class="mb-2"><button class="btn btn-outline-light" type="button">Download
-                                    Experts</button></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 work_item detection">
-                <div class="img-fluid">
-                    <div class="work_box">
-                        <div class="work_img">
-                            <img src="/static/images/works/3.jpg" class="img-fluid mx-auto d-block rounded"
+                            <img src="/static/images/works/3-imagenet.jpg" class="img-fluid mx-auto d-block rounded"
                                 alt="work-img">
                         </div>
                         <div class="work_detail">
@@ -186,21 +188,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="col-lg-4 work_item devlopment webdesign">
-                <a href="/static/images/works/6.jpg" class="img-zoom">
-                    <div class="work_box">
-                        <div class="work_img">
-                            <img src="/static/images/works/6.jpg" class="img-fluid mx-auto d-block rounded"
-                                alt="work-img">
-                        </div>
-                        <div class="work_detail">
-                            <p class="mb-2">Category</p>
-                            <h4 class="mb-0">Project Title</h4>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
         </div>
     </div>
 </section>
@@ -215,12 +202,11 @@
                     <h2>2. Adapt Your Dataset</h2>
                 </div>
                 <div class="text-center mt-4">
-{#                    <a href="/fast_adapt.sh" target="_blank" class="btn btn-custom" download="fast_adapt.sh">Download Fast Adaptation#}
-{#                        Script</a>#}
-                    <a href="https://github.com/yanxi0830/fast-adapt" target="_blank" class="btn btn-custom">Download Fast Adaptation
-                        Script</a>
-                    <p class="text-muted mt-2">TODO: Instructions on running fast adaptation script and expert model
-                        download</p>
+                    <a href="/NeuralDataServer_ClientFastAdapt.ipynb" target="_blank" class="btn btn-custom" download="NeuralDataServer_ClientFastAdapt.ipynb"> Fast Adapt Colab Notebook</a>
+                    <p class="text-muted mt-2">Option 1: Download and open the notebook in Colab to download and adapt experts</p>
+                    <br>
+                    <a href="https://github.com/yanxi0830/fast-adapt" target="_blank" class="btn btn-custom" download="NeuralDataServer_ClientFastAdapt.ipynb"> Fast Adapt Local Script</a>
+                    <p class="text-muted mt-2">Option 2: Download experts and adapt to your dataset locally </p>
                 </div>
             </div>
         </div>
@@ -236,8 +222,7 @@
             <div class="col-lg-12">
                 <div class="text-center">
                     <h2><span class="font-weight-bold">3. Download</span> Data Subset</h2>
-                    <p class="text-muted mx-auto section-subtitle mt-3">Upload the text file generated by our fast
-                        adaptation script to download the subset most relevant for you</p>
+                    <p class="text-muted mx-auto section-subtitle mt-3">Upload the z.pickle file generated by the fast adapt script and download the most relevant subset</p>
                 </div>
             </div>
         </div>
@@ -254,24 +239,21 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="row">
+                        <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group mt-2">
-                                    <label for="select-dataset">Source Dataset</label>
-                                    <select class="form-control" id="select-dataset">
-                                        <option>ImageNet</option>
-                                        <option>COCO</option>
-                                        <option>OpenImages</option>
-                                    </select>
+                                    <label for="select-dataset">Budget (Number of Images)</label>
+                                    <input type="number", class="form-control", id="budget", placeholder="1000">
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                         <div class="row">
                             <div class="col-lg-12 text-right">
-                                <button id="upload-btn" class="submitBnt btn btn-custom text-uppercase" type="button">Upload</button>
+                                <button id="upload-btn" class="submitBnt btn btn-custom text-uppercase"
+                                    type="button">Upload & Visualize</button>
                                 <!-- <input type="submit" class="submitBnt btn btn-custom text-uppercase" value="Upload"> -->
                                 <button id="download-btn" class="submitBnt btn btn-custom text-uppercase" disabled=True
-                                        type="button" onclick="window.open('download-zip')">Download ZIP</button>
+                                    type="button" onclick="window.open('download-zip')">Download</button>
                                 <div id="simple-msg"></div>
                             </div>
                         </div>
