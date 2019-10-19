@@ -11,7 +11,8 @@ var link, node, circles, lables;
 function updateGraph(nodesSpec) {
     console.log("updateGraph");
     console.log(nodesSpec);
-
+    document.getElementById("graph-div").style.display = "block";
+    
     svg.selectAll("*").remove();
 
     var simulation = d3.forceSimulation()
@@ -101,4 +102,4 @@ function updateGraph(nodesSpec) {
     }
 }
 
-updateGraph("/static/default_graph.json");
+// updateGraph("/static/default_graph.json");

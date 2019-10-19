@@ -59,8 +59,8 @@
                         <div class="text-center header-content mx-auto">
                             <h1 class="header-name text-white text-capitalize mb-0">Neural Data Server<span
                                     class="font-weight-bold" data-elements=""></span></h1>
-                            <p class="text-white mx-auto header-desc mt-4">What Data is Useful for my Data: <br>
-                                Transfer Learning with a Mixture of Self-Supervised Experts</p>
+                            <p class="text-white mx-auto header-desc mt-4">Find Best Data to Pre-Train Your Deep Models
+                            </p>
                             <div class="mt-4 pt-2">
                                 <a class="btn btn-outline-custom btn-round" href="#abstract">Learn More</a>
                             </div>
@@ -79,26 +79,20 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center">
-                    <h2><span class="font-weight-bold">Abstract</span></h2>
+                    <h2><span class="font-weight-bold">About</span></h2>
                 </div>
                 <br>
                 <p class="text-muted mt-2">Transfer learning has proven to be a successful way to train high performing
                     deep learning models
                     in various applications for which little labeled data is available. In transfer learning, one
-                    pre-trains the model on a large dataset such as Imagenet or MS-COCO, and fine-tunes its weights
-                    on the target domain. In our work, we claim that in the new era of ever increasing number of
-                    massive datasets, selecting the relevant pre-training data itself is a critical issue. We
-                    introduce a new problem in which available datasets are stored in one centralized location,
-                    i.e., a dataserver. We assume that a client, a target application with its own small labeled
-                    dataset, is only interested in fetching a subset of the server’s data that is most relevant to
-                    its own target domain. We propose a novel method that aims to optimally select subsets of data
-                    from the dataserver given a particular target client. We perform data selection by employing a
-                    mixture of experts model in a series of dataserver- client transactions with a small
-                    computational cost. We show the effectiveness of our work in several transfer learning
-                    scenarios, demonstrating state-of-the-art per- formance on several target datasets and tasks
-                    such as image classification, object detection and instance segmentation. We will make our
-                    framework available as a web-service, serving data to users trying to improve performance in
-                    their A.I. application.</p>
+                    pre-trains the model on a large dataset and fine-tunes its weights
+                    on the target domain. In the new era of ever increasing number of
+                    massive datasets, selecting the relevant pre-training data itself is a critical issue. To address
+                    this,
+                    we present Neural Data Server, a web-service allowing clients (target application with its own small
+                    labeled dataset)
+                    to fetch subset of data that is most relevant to their own target domains. </p>
+                <p class="text-muted mt-2">TODO: GIF/Video</p>
                 <br>
                 <div class="mt-3">
                     <img src="/static/images/server-client.png" alt="" class="img-fluid mx-auto d-block">
@@ -116,8 +110,7 @@
             <div class="col-lg-12">
                 <div class="text-center">
                     <h2>1. Dataset <span class="font-weight-bold">Experts</span></h2>
-                    <p class="text-muted mx-auto section-subtitle mt-3">Download pretrained self-supervised expert
-                        models.</p>
+                    <p class="text-muted mx-auto section-subtitle mt-3">Browse datasets you want to use</p>
                 </div>
             </div>
         </div>
@@ -144,12 +137,18 @@
                                     href="https://storage.googleapis.com/openimages/web/index.html" target="_blank">View
                                     Dataset</a>
                             </div>
-                            <div class="mb-2"><a class="btn btn-outline-light" href="https://www.dropbox.com/s/97kr7k3b2wyjjnn/openimages.zip?dl=0"
-                                    target="_blank" download="">Download
+                            <div class="mb-2"><a class="btn btn-outline-light"
+                                    href="https://www.dropbox.com/s/97kr7k3b2wyjjnn/openimages.zip?dl=0" target="_blank"
+                                    download="">Download
                                     Experts</a>
                             </div>
                         </div>
+                        <!-- <div>
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div> -->
                     </div>
+                    <p><b>License: </b>CC-by 4.0</p>
                 </div>
             </div>
             <div class="col-lg-4 work_item detection">
@@ -163,12 +162,14 @@
                             <div class="mb-2"><a class="btn btn-outline-light" href="http://cocodataset.org/"
                                     target="_blank">View Dataset</a>
                             </div>
-                            <div class="mb-2"><a class="btn btn-outline-light" href="https://www.dropbox.com/s/7odxi0rmutcnkwv/coco.zip?dl=0"
-                                    target="_blank" download="">Download
+                            <div class="mb-2"><a class="btn btn-outline-light"
+                                    href="https://www.dropbox.com/s/7odxi0rmutcnkwv/coco.zip?dl=0" target="_blank"
+                                    download="">Download
                                     Experts</a>
                             </div>
                         </div>
                     </div>
+                    <p><b>License: </b>CC-by 4.0</p>
                 </div>
             </div>
             <div class="col-lg-4 work_item classification">
@@ -186,8 +187,12 @@
                                     Experts</button></div>
                         </div>
                     </div>
+                    <p><b>Copyright: </b><a href="http://image-net.org/download-faq">Terms</a></p>
                 </div>
             </div>
+            <p style="text-align: left; font-size: 90%;">* Licenses presented are for each dataset. We make no
+                warranties regarding the license
+                status of images in each dataset and you should verify the license for each image yourself.</p>
         </div>
     </div>
 </section>
@@ -201,13 +206,28 @@
                 <div class="text-center">
                     <h2>2. Adapt Your Dataset</h2>
                 </div>
-                <div class="text-center mt-4">
+                <br>
+                <div class="row">
+                    <div class="col-lg-6 text-center">
+                        <a href="https://colab.research.google.com/drive/1X2BvoQcaFWDKTov6zOwVtaa7O9eBlQE3"
+                            target="_blank" class="btn btn-custom" download="NeuralDataServer_ClientFastAdapt.ipynb">
+                            Fast Adapt Colab Notebook</a>
+                        <p class="text-muted mt-2">Option 1: Open the Colab Notebook to download and adapt experts</p>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <a href="https://github.com/yanxi0830/NeuralDataServer-FastAdapt" target="_blank"
+                            class="btn btn-custom" download="NeuralDataServer_ClientFastAdapt.ipynb"> Fast Adapt Local
+                            Script</a>
+                        <p class="text-muted mt-2">Option 2: Download experts and adapt to your dataset locally </p>
+                    </div>
+                    <!-- <div class="col-lg-12"> -->
                     <!-- <a href="/NeuralDataServer_ClientFastAdapt.ipynb" target="_blank" class="btn btn-custom" download="NeuralDataServer_ClientFastAdapt.ipynb"> Fast Adapt Colab Notebook</a> -->
-                    <a href="https://colab.research.google.com/drive/1X2BvoQcaFWDKTov6zOwVtaa7O9eBlQE3" target="_blank" class="btn btn-custom" download="NeuralDataServer_ClientFastAdapt.ipynb"> Fast Adapt Colab Notebook</a>
-                    <p class="text-muted mt-2">Option 1: Download and open the notebook in Colab to download and adapt experts</p>
-                    <br>
-                    <a href="https://github.com/yanxi0830/NeuralDataServer-FastAdapt" target="_blank" class="btn btn-custom" download="NeuralDataServer_ClientFastAdapt.ipynb"> Fast Adapt Local Script</a>
-                    <p class="text-muted mt-2">Option 2: Download experts and adapt to your dataset locally </p>
+                    <!-- <a href="https://colab.research.google.com/drive/1X2BvoQcaFWDKTov6zOwVtaa7O9eBlQE3" target="_blank" class="btn btn-custom" download="NeuralDataServer_ClientFastAdapt.ipynb"> Fast Adapt Colab Notebook</a> -->
+                    <!-- <p class="text-muted mt-2">Option 1: Download and open the notebook in Colab to download and adapt experts</p> -->
+                    <!-- <br> -->
+                    <!-- <a href="https://github.com/yanxi0830/NeuralDataServer-FastAdapt" target="_blank" class="btn btn-custom" download="NeuralDataServer_ClientFastAdapt.ipynb"> Fast Adapt Local Script</a> -->
+                    <!-- <p class="text-muted mt-2">Option 2: Download experts and adapt to your dataset locally </p> -->
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
@@ -223,7 +243,9 @@
             <div class="col-lg-12">
                 <div class="text-center">
                     <h2><span class="font-weight-bold">3. Download</span> Data Subset</h2>
-                    <p class="text-muted mx-auto section-subtitle mt-3">Upload the z.pickle file generated by the fast adapt script and download the most relevant subset</p>
+                    <p class="text-muted mx-auto section-subtitle mt-3">Upload the transfer.pkl file generated by the
+                        fast
+                        adapt script and download the most relevant subset</p>
                 </div>
             </div>
         </div>
@@ -244,7 +266,7 @@
                             <div class="col-lg-12">
                                 <div class="form-group mt-2">
                                     <label for="select-dataset">Budget (Number of Images)</label>
-                                    <input type="number", class="form-control", id="budget", placeholder="1000">
+                                    <input type="number" , class="form-control" , id="budget" , placeholder="1000">
                                 </div>
                             </div>
                         </div>
@@ -262,9 +284,20 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-5" style="display: none;" id="graph-div">
             <div class="col-lg-12">
                 <svg width="960" height="650"></svg>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section" id="link-own-dataset">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-center">
+                    <h2>Team</h2>
+                </div>
             </div>
         </div>
     </div>
