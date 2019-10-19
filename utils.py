@@ -65,7 +65,8 @@ def sample_from_partition(pickle_dict, budget):
         cluster_idx = int(cluster_idx)
         partition = dataset2partition[dataset]
         cluster_filepaths = partition['clusters'][cluster_idx]
-        filenames.extend(cluster_filepaths)
+        cluster_filepaths_prefix = map(lambda x: '{}/{}'.format(dataset, x), cluster_filepaths)
+        filenames.extend(cluster_filepaths_prefix)
         filenames_probs.extend([1.0/len(cluster_filepaths) * expert_probs[i]] * len(cluster_filepaths))
 
     filenames_probs = np.array(filenames_probs)
