@@ -603,7 +603,8 @@ button:focus {
 
 .footer {
     padding: 20px 0px;
-    background-color: #242424 !important;
+    /* background-color: #242424 !important; */
+    background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
 .footer .footer-alt p {
@@ -614,6 +615,7 @@ button:focus {
     border-radius: 20%;
     transition: all 0.5s;
     background-color: rgba(241, 241, 241, 0.08);
+    /* background-color: rgba(255, 255, 255, 0.6) !important; */
     width: 24px;
     height: 24px;
     display: block;

@@ -62,7 +62,7 @@
                         <div class="text-center header-content mx-auto">
                             <h1 class="header-name text-white text-capitalize mb-0">Neural Data Server<span
                                     class="font-weight-bold" data-elements=""></span></h1>
-                            <p class="text-white mx-auto header-desc mt-4">Find Best Data to Pre-Train Your Deep Neural
+                            <p class="text-white mx-auto header-desc mt-1">Find Best Data to Pre-Train Your Deep Neural
                                 Models
                             </p>
                             <div class="mt-4 pt-2">
@@ -109,11 +109,11 @@
                     <!-- <img src="/static/images/server-client.png" alt="" class="img-fluid mx-auto d-block"> -->
                 </div>
                 <br>
+                <p class="text-muted mt-2"><b>Disclaimer:</b></p>
                 <p class="text-muted mt-2"><b>* We do not host datasets. </b>In NDS we provide links to examples in
                     existing datasets. These examples are carefully chosen for your own data and task. Below each
                     dataset we provide the license information. Please contact each dataset’s original provider for any
                     questions/licensing.</p>
-                <br>
                 <p class="text-muted mt-2"><b> ** Terms of Use: </b>NDS is a free service. By using NDS, in addition to
                     respecting
                     the original dataset
@@ -132,8 +132,8 @@
             <div class="col-lg-12">
                 <div class="text-center">
                     <h2>1. NDS <span class="font-weight-bold">Dataset Registry</span></h2>
-                    <p class="text-muted mx-auto section-subtitle mt-3">Check out our dataset registry and download
-                        experts</p>
+                    <p class="text-muted mx-auto section-subtitle mt-3">Check out our datasets we current supports. You
+                        can optionally hover and download experts for local adaptation.</p>
                 </div>
             </div>
         </div>
@@ -241,13 +241,13 @@
                         <a href="https://colab.research.google.com/drive/1X2BvoQcaFWDKTov6zOwVtaa7O9eBlQE3"
                             target="_blank" class="btn btn-custom" download="NeuralDataServer_ClientFastAdapt.ipynb">
                             Fast Adapt Colab Notebook</a>
-                        <p class="text-muted mt-2">Option 1: Open the Colab Notebook to download and adapt experts</p>
+                        <p class="text-muted mt-2">Web Option: Open the Colab Notebook to download and adapt experts</p>
                     </div>
                     <div class="col-lg-6 text-center">
                         <a href="https://github.com/yanxi0830/NeuralDataServer-FastAdapt" target="_blank"
                             class="btn btn-custom" download="NeuralDataServer_ClientFastAdapt.ipynb"> Fast Adapt Local
                             Script</a>
-                        <p class="text-muted mt-2">Option 2: Download experts and adapt to your dataset locally </p>
+                        <p class="text-muted mt-2">Local Option: Download experts and adapt to your dataset locally </p>
                     </div>
                     <!-- <div class="col-lg-12"> -->
                     <!-- <a href="/NeuralDataServer_ClientFastAdapt.ipynb" target="_blank" class="btn btn-custom" download="NeuralDataServer_ClientFastAdapt.ipynb"> Fast Adapt Colab Notebook</a> -->
@@ -305,9 +305,10 @@
                                     type="button">Upload & Visualize</button>
                                 <!-- <input type="submit" class="submitBnt btn btn-custom text-uppercase" value="Upload"> -->
                                 <button id="download-btn" class="submitBnt btn btn-custom text-uppercase" disabled=True
-                                    type="button" data-toggle="tooltip" data-placement="bottom" title="We do not host datasets on our server,
+                                    type="button" data-toggle="tooltip" data-placement="bottom"
+                                    title="We do not host datasets on our server,
                                     clicking Download will give you a JSON
-                                    file containing image filenames prefixed by their dataset.">Download</button>
+                                    file containing image filenames prefixed by their dataset. Annotations can be obtained from the respective original dataset provider.">Download</button>
                                 <div id="simple-msg">
                                 </div>
                                 <br>
@@ -341,18 +342,40 @@
         </div>
     </div>
 </section> -->
-<div class="text-center bg-light col-lg-12">
-    <img src="/static/images/uoft.png" style="width: 15%;"></img>
-    <img src="/static/images/vector.png" style="width: 15%;"></img>
-</div>
+
 <!-- END CONTACT -->
 <!--START FOOTER-->
-<footer class="footer bg-light" style="height: 0px;">
+
+<section class="section" id="footer">
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col-md-12">
                 <div class="text-center text-white footer-alt">
-                    <!-- <ul class="list-unstyled list-inline mb-3">
+                    <div class="text-center col-lg-12">
+                        <img src="/static/images/uoft.png" style="width: 15%;"></img>
+                        <img src="/static/images/vector.png" style="width: 15%;"></img>
+                    </div>
+                    <br>
+                    <p class="text-muted mb-0"> Copyright &copy; University of Toronto 2019</p>
+                    <ul class="list-unstyled list-inline mb-3">
+                        <li class="list-inline-item"><a href="#"><i class="mdi mdi-email text-muted"></i></a>
+                        </li>
+                        <!-- <li class="list-inline-item"><a href="#"><i class="mdi mdi-linkedin text-muted"></i></a>
+                        </li> -->
+                        <!-- <li class="list-inline-item"><a href="#"><i class="mdi mdi-pinterest text-muted"></i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter text-muted"></i></a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- <footer class="footer">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-12">
+                <div class="text-center text-white footer-alt">
+                    <ul class="list-unstyled list-inline mb-3">
                             <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook text-muted"></i></a>
                             </li>
                             <li class="list-inline-item"><a href="#"><i class="mdi mdi-linkedin text-muted"></i></a>
@@ -360,12 +383,12 @@
                             <li class="list-inline-item"><a href="#"><i class="mdi mdi-pinterest text-muted"></i></a>
                             </li>
                             <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter text-muted"></i></a></li>
-                        </ul> -->
+                        </ul>
                     <p class="text-muted mb-0"> Copyright &copy; University of Toronto 2019</p>
                 </div>
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
 <!--END FOOTER-->
 {% endblock %}
