@@ -17,6 +17,13 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route("/index.html")
+def index():
+    return render_template('index.html')
+
+@app.route("/paper.html")
+def paper():
+    return render_template('paper.html')
 
 @app.route("/NeuralDataServer_ClientFastAdapt.ipynb")
 def download_coco_experts():

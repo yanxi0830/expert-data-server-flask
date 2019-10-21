@@ -246,6 +246,26 @@ button:focus {
     transition: all 0.5s ease-in-out;
 }
 
+.custom-nav-fix {
+    background-color: transparent;
+    padding: 20px 0px;
+    width: 100%;
+    border-radius: 0px;
+    z-index: 999;
+    margin-bottom: 0px;
+}
+
+.custom-nav-fix .navbar-nav li a {
+    /* color: rgba(255, 255, 255, 0.6) !important; */
+    font-size: 15px;
+    /* background-color: transparent !important; */
+    margin: 0 7px;
+    letter-spacing: 0.05em;
+    line-height: 24px;
+    transition: all 0.5s;
+    font-weight: 500;
+}
+
 .custom-nav .navbar-nav li a {
     color: rgba(255, 255, 255, 0.6) !important;
     font-size: 15px;
@@ -582,7 +602,7 @@ button:focus {
 ========================*/
 
 .footer {
-    padding: 70px 0px;
+    padding: 20px 0px;
     background-color: #242424 !important;
 }
 
@@ -591,11 +611,11 @@ button:focus {
 }
 
 .footer .footer-alt ul li a {
-    border-radius: 50%;
+    border-radius: 20%;
     transition: all 0.5s;
     background-color: rgba(241, 241, 241, 0.08);
-    width: 42px;
-    height: 42px;
+    width: 24px;
+    height: 24px;
     display: block;
     font-size: 18px;
     line-height: 42px;
