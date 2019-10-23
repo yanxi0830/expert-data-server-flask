@@ -25,6 +25,10 @@ def index():
 def paper():
     return render_template('paper.html')
 
+@app.route("/demo.html")
+def demo():
+    return render_template('demo.html')
+
 @app.route("/NeuralDataServer_ClientFastAdapt.ipynb")
 def download_coco_experts():
     script_path = 'scripts/NeuralDataServer_ClientFastAdapt.ipynb'
