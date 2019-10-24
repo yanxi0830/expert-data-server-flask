@@ -29,6 +29,10 @@ def paper():
 def demo():
     return render_template('demo.html')
 
+@app.route("/contribute.html")
+def contribute():
+    return render_template('contribute.html')
+
 @app.route("/NeuralDataServer_ClientFastAdapt.ipynb")
 def download_coco_experts():
     script_path = 'scripts/NeuralDataServer_ClientFastAdapt.ipynb'
