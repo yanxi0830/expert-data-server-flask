@@ -44,9 +44,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center">
-                    <h2><span class="font-weight-bold">What Data is Useful for My Data: Transfer Learning with a Mixture
-                            of
-                            Self-Supervised Experts</span></h2>
+                    <h2><span class="font-weight-bold">Neural Data Server: A Large-Scale Search Engine for Transfer
+                            Learning Data</span></h2>
                     <table align=center width=700px>
                         <tr>
                             <td align=center width=100px>
@@ -97,30 +96,28 @@
                     </div>
                     <br>
                     <br>
-                    <p class="text-muted mt-2" style="text-align: justify;">Transfer learning has proven to be a
-                        successful way to train high
-                        performing
-                        deep learning models in various applications for which little labeled data is available. In
-                        transfer
-                        learning, one pre-trains the model on a large dataset such as Imagenet or MS-COCO, and
-                        fine-tunes
-                        its weights on the target domain. In our work, we claim that in the new era of ever increasing
-                        number of massive datasets, selecting the relevant pre-training data itself is a critical issue.
-                        We
-                        introduce a new problem in which available datasets are stored in one centralized location,
-                        i.e., a
-                        dataserver. We assume that a client, a target application with its own small labeled dataset, is
-                        only interested in fetching a subset of the server’s data that is most relevant to its own
-                        target
-                        domain. We propose a novel method that aims to optimally select subsets of data from the
-                        dataserver
-                        given a particular target client. We perform data selection by employing a mixture of experts
-                        model
-                        in a series of dataserver-client transactions with a small computational cost. We show the
-                        effectiveness of our work in several transfer learning scenarios, demonstrating state-of-the-art
-                        per- formance on several target datasets and tasks such as image classification, object
-                        detection
-                        and instance segmentation. 
+                    <p class="text-muted mt-2" style="text-align: justify;">
+                        Transfer learning has proven to be a successful technique to train %high-end performing
+                        deep learning models in the domains where little training data is available.
+                        The dominant approach is to pretrain a model on a large generic dataset such as ImageNet and
+                        finetune its weights on the target domain.
+                        However, in the new era of an ever increasing number of massive datasets, \emph{selecting the
+                        relevant data for pretraining} is a critical issue.
+                        We introduce Neural Data Server (NDS), a large-scale search engine for finding the most
+                        %relevant labeled data to the target domain.
+                        useful transfer learning data to the target domain.
+                        Our NDS consists of a dataserver which indexes several large popular image datasets, and aims to
+                        recommend data to a client, an end-user with a target application with its own small labeled
+                        dataset.
+                        As in any search engine that serves information to possibly numerous users, we want the online
+                        computation performed by the dataserver to be minimal.
+                        The dataserver represents large datasets with a much more compact mixture-of-experts model, and
+                        employs it to perform data search in a series of dataserver-client transactions at a low computational
+                        cost. We show the effectiveness of NDS in various transfer learning scenarios, demonstrating
+                        state-of-the-art performance on several target datasets and tasks such as image classification,
+                        object detection and instance segmentation. Our Neural Data Server will be made available as a
+                        web-service,
+                        recommending data to users with the aim to improve performance in their A.I. application.
                     </p>
                 </div>
             </div>
