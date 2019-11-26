@@ -25,6 +25,10 @@ def index():
 def paper():
     return render_template('paper.html')
 
+@app.route("/terms.html")
+def terms():
+    return render_template('terms.html')
+
 @app.route("/demo.html")
 def demo():
     return render_template('demo.html')

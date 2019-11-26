@@ -246,6 +246,16 @@ button:focus {
     transition: all 0.5s ease-in-out;
 }
 
+.custom-nav-sub {
+    background-color: transparent;
+    padding: 20px 0px;
+    width: 100%;
+    border-radius: 0px;
+    z-index: 999;
+    margin-bottom: 0px;
+    transition: all 0.5s ease-in-out;
+}
+
 .custom-nav-fix {
     background-color: transparent;
     padding: 20px 0px;
@@ -294,6 +304,14 @@ button:focus {
     display: none;
 }
 
+.stickyadd2 .logo .logo-dark {
+    display: inline-block;
+}
+
+.stickyadd2 .logo .logo-light {
+    display: none;
+}
+
 .logo .logo-dark {
     display: none;
 }
@@ -316,6 +334,16 @@ button:focus {
 }
 
 .custom-nav.stickyadd .navbar-nav li a {
+    color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.custom-nav.stickyadd2 {
+    background-color: #fff !important;
+    box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.050980392156862744);
+    padding: 15px 0px;
+}
+
+.custom-nav.stickyadd2 .navbar-nav li a {
     color: rgba(0, 0, 0, 0.6) !important;
 }
 

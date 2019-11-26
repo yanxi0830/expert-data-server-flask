@@ -12,7 +12,7 @@
 </div>
 
 <!-- Start Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top custom-nav sticky">
+<nav class="navbar navbar-expand-lg fixed-top custom-nav sticky stickyadd2">
     <div class="container">
 
         <a class="navbar-brand pt-0 logo" href="index.html">
@@ -31,7 +31,16 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="paper.html">Instructions</a>
+                    <a class="nav-link" href="index.html">Search Engine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="demo.html">Guide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contribute.html">Contribute</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="paper.html">Paper and Team</a>
                 </li>
             </ul>
         </div>
@@ -39,41 +48,50 @@
 </nav>
 <!-- End Navbar -->
 
-<!-- START ABSTRACT -->
 <section class="section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center">
-                    <h2><span class="font-weight-bold">Instruction</span></h2>
-                    <p class="text-muted mt-2">Watch the 2 minute video below on how to use our
-                        platform.</p>
+                    <h2><span class="font-weight-bold">What is Neural Data Server?</span></h2>
+                </div>
+                <br>
+                <p class="text-muted mt-2" style="text-align: justify;">Transfer learning has proven to be a successful
+                    way to train high performing
+                    deep learning models
+                    in various applications for which little labeled data is available. In transfer learning, one
+                    pre-trains the model on a large dataset and fine-tunes its weights
+                    on the target domain. In the new era of ever increasing number of
+                    massive datasets, selecting the relevant pre-training data itself is a critical issue. To address
+                    this, we introduce Neural Data Server, a web search
+                    engine that uses A.I. to find the best data to pre-train your deep neural models for your target
+                    application. Neural Data Server
+                    indexes several popular Machine Learning datasets in its quest to serve optimal data to ML users.
+                    For further technical information about NDS please see our <a href="paper.html"
+                        target="_blank">paper</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-center">
+                    <h2><span class="font-weight-bold">Instruction Video</span></h2>
+                    <p class="text-muted mt-2">Watch the 2 minute instruction video on how to use our platform.</p>
                     <div class='embed-container'><iframe src='https://www.youtube-nocookie.com/embed/I308xDHVgU4'
                             frameborder='0'
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe></div>
-                    <!-- <p class="text-muted mt-2">Transfer learning has proven to be a successful way to train high performing
-                    deep learning models in various applications for which little labeled data is available. In transfer
-                    learning, one pre-trains the model on a large dataset such as Imagenet or MS-COCO, and fine-tunes
-                    its weights on the target domain. In our work, we claim that in the new era of ever increasing
-                    number of massive datasets, selecting the relevant pre-training data itself is a critical issue. We
-                    introduce a new problem in which available datasets are stored in one centralized location, i.e., a
-                    dataserver. We assume that a client, a target application with its own small labeled dataset, is
-                    only interested in fetching a subset of the server’s data that is most relevant to its own target
-                    domain. We propose a novel method that aims to optimally select subsets of data from the dataserver
-                    given a particular target client. We perform data selection by employing a mixture of experts model
-                    in a series of dataserver- client transactions with a small computational cost. We show the
-                    effectiveness of our work in several transfer learning scenarios, demonstrating state-of-the-art
-                    per- formance on several target datasets and tasks such as image classification, object detection
-                    and instance segmentation. We will make our framework available as a web-service, serving data to
-                    users trying to improve performance in their A.I. application.
-                </p> -->
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- END PAPER -->
+
 
 <!--START FOOTER-->
 <section class="section" id="footer">
@@ -87,15 +105,10 @@
                     </div>
                     <br>
                     <p class="text-muted mb-0"> Copyright &copy; University of Toronto 2019</p>
-                    <ul class="list-unstyled list-inline mb-3">
+                    <ul class="list-unstyled list-inline">
                         <li class="list-inline-item"><a href="mailto:nds@cs.toronto.edu" , target="_blank"><i
-                                    class="mdi mdi-email text-muted"></i></a>
+                                    class="mdi mdi-email text-muted md-36" style="font-size: 150%;"></i></a>
                         </li>
-                        <!-- <li class="list-inline-item"><a href="#"><i class="mdi mdi-linkedin text-muted"></i></a>
-                        </li> -->
-                        <!-- <li class="list-inline-item"><a href="#"><i class="mdi mdi-pinterest text-muted"></i></a>
-                        </li>
-                        <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter text-muted"></i></a></li> -->
                     </ul>
                 </div>
             </div>
