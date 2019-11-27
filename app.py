@@ -29,6 +29,10 @@ def paper():
 def terms():
     return render_template('terms.html')
 
+@app.route("/privacy.html")
+def privacy():
+    return render_template('privacy.html')
+
 @app.route("/demo.html")
 def demo():
     return render_template('demo.html')

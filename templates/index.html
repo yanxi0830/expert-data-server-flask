@@ -99,19 +99,20 @@
                     indexes several popular Machine Learning datasets in its quest to serve optimal data to ML users.
                 </p> -->
                 <p class="text-muted mt-2" style="text-align: justify;">Neural Data Server is a search engine that
-                    uses A.I. to find the best data to pre-train your deep neural models for your target application. In
-                    the new era of ever increasing number of
-                    massive datasets, selecting the relevant pre-training data itself is a critical issue. To address
-                    this, we introduce Neural Data Server, a web search
-                    engine that uses A.I. to find the best data to pre-train your deep neural models for your target
-                    application. Neural Data Server
+                    uses A.I. to find the best data to pre-train your deep neural models for your target application.
+                    Neural Data Server
                     indexes several popular Machine Learning datasets in its quest to serve optimal data to ML users,
-                    and returns IDs of relevant data for your application.
+                    and returns IDs of relevant data for your application. In order to "search" over our Dataset
+                    Registry, (1) first, use our <a href="#fast-adapt">script</a> to adapt to your dataset and generate
+                    a transfer.pickle file for
+                    communicating to our server (2) next, <a href="#download-subset">upload</a> the transfer.pickle
+                    file, and click download to obtain a JSON file containing the
+                    IDs of the most relevant data subset for your application. Check out our <a href="demo.html"
+                        target="_blank">Guide</a> for a
+                    instruction demo on how to use our platform.
                 </p>
-                <p class="text-muted mt-2">Watch the short video below on how Neural Data Server works. Also checkout
-                    our guide on how to use our
-                    platform. For further technical information about NDS please see our <a href="paper.html"
-                        target="_blank">paper</a>. </p>
+                <p class="text-muted mt-2">Watch the short video below on how Neural Data Server works. For further
+                    technical information about NDS please see our <a href="paper.html" target="_blank">paper</a>. </p>
                 <br>
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -119,7 +120,7 @@
                     </div>
                 </div>
                 <div class="mt-3 text-center">
-                    <video width="80%" controls>
+                    <video width="40%" controls>
                         <source src="/static/images/DNSINTROFINALFINAL.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -127,7 +128,7 @@
                 </div>
                 <br>
                 <p class="text-muted mt-2"><b>Disclaimer:</b></p>
-                <p class="text-muted mt-2"><b>* We do not host datasets. </b>In NDS we provide links to examples from
+                <p class="text-muted mt-2"><b>We do not host datasets. </b>In NDS we provide IDs to examples from
                     existing datasets. Below each
                     dataset we provide the license information. Please contact each dataset’s original provider for any
                     questions/licensing.</p>
@@ -233,7 +234,7 @@
                 status of images in each dataset and you should verify the license for each image yourself.</p>
             <br><br><br><br>
             <p style="text-align: left;"><b>Contribute:</b> Help grow NDS dataset registry by registering your dataset.
-                <a href="https://forms.gle/5GYFuSZ1emjQGwKH7">Please see instructions.</a></p>
+                <a href="contribute.html">Please see instructions.</a></p>
         </div>
     </div>
 </section>
@@ -343,7 +344,7 @@
                 source dataset cluster. Closer nodes imply higher relevancy to your dataset.
             </p>
         </div>
-        <p class="text-muted mt-2" style="font-size: 100%; text-align: justify;"><b> * Terms of Use: </b>NDS is a free
+        <!-- <p class="text-muted mt-2" style="font-size: 100%; text-align: justify;"><b> * Terms of Use: </b>NDS is a free
             service. By using NDS,
             in addition to
             respecting
@@ -351,7 +352,7 @@
             licenses, you agree that the data suggested to you by NDS will not be used in offensive or
             non-ethical A.I. applications. Our dataset experts are neural networks trained on subsets of the datasets.
             Using the experts themselves for commercial applications is strictly forbidden. You are required to license
-            the data from original dataset providers.</p>
+            the data from original dataset providers.</p> -->
 
     </div>
 </section>
@@ -378,8 +379,14 @@
                         <li class="list-inline-item"><a href="terms.html" , target="_blank"><i
                                     class="mdi mdi-information-outline text-muted">License and Terms</i></a>
                         </li>
+                        <li class="list-inline-item"><a href="privacy.html" , target="_blank"><i
+                                    class="mdi mdi-information-outline text-muted">Privacy Policy</i></a>
+                        </li>
                         <li class="list-inline-item"><a href="mailto:nds@cs.toronto.edu" , target="_blank"><i
                                     class="mdi mdi-email text-muted">Contact Us</i></a>
+                        </li>
+                        <li class="list-inline-item"><a href="contribute.html" , target="_blank"><i
+                                    class="mdi mdi-git text-muted">Contribute</i></a>
                         </li>
                     </ul>
                     <div class="text-center col-lg-12">
