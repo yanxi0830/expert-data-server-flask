@@ -5,6 +5,8 @@ import io
 import zipfile
 import pickle
 import json
+import argparse
+
 from utils import transfer_pickle2json, sample_from_partition
 
 app = Flask(__name__)
@@ -13,41 +15,41 @@ app = Flask(__name__)
 # Controllers.
 # ----------------------------------------------------------------------------#
 
-@app.route("/")
+@app.route("/nds/")
 def home():
     return render_template('index.html')
 
-@app.route("/index.html")
+@app.route("/nds/index.html")
 def index():
     return render_template('index.html')
 
-@app.route("/paper.html")
+@app.route("/nds/paper.html")
 def paper():
     return render_template('paper.html')
 
-@app.route("/terms.html")
+@app.route("/nds/terms.html")
 def terms():
     return render_template('terms.html')
 
-@app.route("/privacy.html")
+@app.route("/nds/privacy.html")
 def privacy():
     return render_template('privacy.html')
 
-@app.route("/demo.html")
+@app.route("/nds/demo.html")
 def demo():
     return render_template('demo.html')
 
-@app.route("/contribute.html")
+@app.route("/nds/contribute.html")
 def contribute():
     return render_template('contribute.html')
 
-@app.route("/NeuralDataServer_ClientFastAdapt.ipynb")
+@app.route("/nds/NeuralDataServer_ClientFastAdapt.ipynb")
 def download_coco_experts():
     script_path = 'scripts/NeuralDataServer_ClientFastAdapt.ipynb'
     return send_file(script_path, attachment_filename='NeuralDataServer_ClientFastAdapt.ipynb')
 
 
-@app.route('/upload', methods=['POST'])
+@app.route('/nds/upload', methods=['POST'])
 def upload_file():
     if request.method == 'POST':
         save_path = os.path.join('tmp', 'z.pickle')
@@ -59,7 +61,7 @@ def upload_file():
     return "UPLOAD-ENDPOINT"
 
 
-@app.route('/download-data', methods=['GET'])
+@app.route('/nds/download-data', methods=['GET'])
 def request_zip():
     budget = int(request.args.get('budget'))
     save_path = os.path.join('tmp', 'z.pickle')
@@ -91,6 +93,12 @@ def request_zip():
 # Launch.
 # ----------------------------------------------------------------------------#
 
-# Default port: 5000
+def get_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--port', type=int, default=8002)
+
+    return parser.parse_args()
+
 if __name__ == "__main__":
-    app.run()
+    args = get_args()
+    app.run(port=args.port, threaded=True)
