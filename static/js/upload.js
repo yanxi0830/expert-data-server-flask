@@ -4,7 +4,7 @@ $(function() {
         console.log(form_data)
         $.ajax({
             type: 'POST',
-            url: '/upload',
+            url: 'upload',
             data: form_data,
             contentType: false,
             cache: false,
